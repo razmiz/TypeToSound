@@ -21,9 +21,11 @@ function handleKeyPress(key) {
 }
 
 function playSound(key) {
-    // השתמש בקובץ אודיו תואם לכל אות. לדוגמה:
-    const audio = new Audio(`a.mp3`);
-    audio.play();
+    const audioFilePath = `sounds/${key}.mp3`;
+    const audio = new Audio(audioFilePath);
+    audio.play().catch(error => {
+        console.error(`Error playing sound for key ${key}:`, error);
+    });
 }
 
 function displayContent(key) {
@@ -51,11 +53,7 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
-function playSound(key) {
-    // בדיקה אם קובץ האודיו קיים
-    const audioFilePath = `sounds/${key}.mp3`;
-    const audio = new Audio(audioFilePath);
-    audio.play().catch(error => {
-        console.error(`Error playing sound for key ${key}:`, error);
-    });
-}
+// פתיחת המקלדת במכשיר נייד
+document.addEventListener('click', function() {
+    document.getElementById('hidden-input').focus();
+});
