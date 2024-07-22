@@ -1,18 +1,27 @@
 document.addEventListener('keydown', function(event) {
-    const contentDiv = document.getElementById('content');
     const key = event.key.toLowerCase();
+    handleKeyPress(key);
+});
 
+document.querySelectorAll('.key').forEach(button => {
+    button.addEventListener('click', function() {
+        const key = this.getAttribute('data-key');
+        handleKeyPress(key);
+    });
+});
+
+function handleKeyPress(key) {
+    const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = ''; // נקה את התוכן הקודם
 
     if (key >= 'a' && key <= 'z') {
         playSound(key);
         displayContent(key);
     }
-});
+}
 
 function playSound(key) {
-    // שימוש בקובץ אודיו אחד לדוגמה לכל האותיות
-    const audio = new Audio('a.mp3');
+    const audio = new Audio(`a.mp3`);
     audio.play();
 }
 
