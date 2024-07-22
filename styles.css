@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -59,4 +58,24 @@ body {
 #main {
     transition: margin-left 0.5s;
     padding: 16px;
+}
+
+/* התאמות למכשירים ניידים */
+@media screen and (max-width: 600px) {
+    .sidebar a {
+        font-size: 18px;
+    }
+
+    .openbtn {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+
+    .sidebar .closebtn {
+        font-size: 30px;
+    }
+
+    #main {
+        padding: 10px;
+    }
 }
