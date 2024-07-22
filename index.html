@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="he">
 <head>
@@ -17,8 +16,14 @@
         <button class="openbtn" onclick="openNav()">☰ תפריט</button> 
         <div class="container">
             <h1>ברוכים הבאים!</h1>
-            <p>לחצו על אות במקלדת כדי להשמיע סאונד ולהציג טקסט או וידאו</p>
+            <p>לחצו על אות במקלדת או על כפתור כדי להשמיע סאונד ולהציג טקסט או וידאו</p>
             <div id="content"></div>
+            <div id="virtual-keys">
+                <button class="key" data-key="a">A</button>
+                <button class="key" data-key="b">B</button>
+                <button class="key" data-key="c">C</button>
+                <!-- הוסף עוד כפתורים לפי הצורך -->
+            </div>
         </div>
     </div>
     <script src="scripts.js"></script>
