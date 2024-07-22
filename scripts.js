@@ -21,6 +21,7 @@ function handleKeyPress(key) {
 }
 
 function playSound(key) {
+    // בדיקה אם קובץ האודיו קיים
     const audioFilePath = `sounds/${key}.mp3`;
     const audio = new Audio(audioFilePath);
     audio.play().catch(error => {
@@ -55,5 +56,7 @@ function closeNav() {
 
 // פתיחת המקלדת במכשיר נייד
 document.addEventListener('click', function() {
-    document.getElementById('hidden-input').focus();
+    const hiddenInput = document.getElementById('hidden-input');
+    hiddenInput.focus();
+    hiddenInput.click();
 });
