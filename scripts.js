@@ -21,8 +21,7 @@ function handleKeyPress(key) {
 }
 
 function playSound(key) {
-    // בדיקה אם קובץ האודיו קיים
-    const audioFilePath = `${key}.mp3`; // תיקון הנתיב כדי שיהיה בתיקיית השורש
+    const audioFilePath = `sounds/${key}.mp3`; // תיקון הנתיב כדי שיהיה בתיקיית sounds
     const audio = new Audio(audioFilePath);
     audio.play().catch(error => {
         console.error(`Error playing sound for key ${key}:`, error);
@@ -39,7 +38,7 @@ function displayContent(key) {
 
     // דוגמא להצגת וידאו (אם יש קבצים מתאימים)
     const videoElement = document.createElement('video');
-    videoElement.src = `videos/${key}.mp4`;
+    videoElement.src = `videos/${key}.mp4`; // תיקון הנתיב כדי שיהיה בתיקיית videos
     videoElement.controls = true;
     contentDiv.appendChild(videoElement);
 }
