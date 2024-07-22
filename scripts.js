@@ -22,7 +22,7 @@ function handleKeyPress(key) {
 
 function playSound(key) {
     // בדיקה אם קובץ האודיו קיים
-    const audioFilePath = `sounds/${key}.mp3`;
+    const audioFilePath = `${key}.mp3`; // תיקון הנתיב כדי שיהיה בתיקיית השורש
     const audio = new Audio(audioFilePath);
     audio.play().catch(error => {
         console.error(`Error playing sound for key ${key}:`, error);
@@ -37,7 +37,7 @@ function displayContent(key) {
     textElement.textContent = `לחצתם על האות ${key}`;
     contentDiv.appendChild(textElement);
 
-    // דוגמא להצגת וידאו
+    // דוגמא להצגת וידאו (אם יש קבצים מתאימים)
     const videoElement = document.createElement('video');
     videoElement.src = `videos/${key}.mp4`;
     videoElement.controls = true;
