@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אינטראקציה עם מקלדת</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <button class="closebtn" onclick="closeNav()">×</button>
+        <a href="#">עמוד ראשי</a>
+        <a href="#">עמוד נוסף</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ תפריט</button> 
+        <div class="container">
+            <h1>ברוכים הבאים!</h1>
+            <p>לחצו על אות במקלדת כדי להשמיע סאונד ולהציג טקסט או וידאו</p>
+            <div id="content"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
