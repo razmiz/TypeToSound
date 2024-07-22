@@ -60,6 +60,25 @@ body {
     padding: 16px;
 }
 
+#virtual-keys {
+    margin-top: 20px;
+}
+
+.key {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.key:active {
+    background-color: #45a049;
+}
+
 /* התאמות למכשירים ניידים */
 @media screen and (max-width: 600px) {
     .sidebar a {
@@ -77,5 +96,10 @@ body {
 
     #main {
         padding: 10px;
+    }
+
+    .key {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }
